@@ -23,6 +23,13 @@ $centros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
+<!--
+    Author  Mauricio Fontebasso
+    Support <https://github.com/MauriFont/DelegacionesUGR-WebApp>
+    Email   <elfontex80@gmail.com>
+    license MIT <http://opensource.org/licenses/MIT>
+-->
+
 <!DOCTYPE html>
 <html>
 

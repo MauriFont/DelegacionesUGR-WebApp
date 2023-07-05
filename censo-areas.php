@@ -31,6 +31,13 @@ $sql = "SELECT id, area_id, nombre, orden FROM Cargos_por_area ORDER BY orden AS
 $cargos = $pdo->getUnique($sql);
 ?>
 
+<!--
+    Author  Mauricio Fontebasso
+    Support <https://github.com/MauriFont/DelegacionesUGR-WebApp>
+    Email   <elfontex80@gmail.com>
+    license MIT <http://opensource.org/licenses/MIT>
+-->
+
 <!DOCTYPE html>
 <html>
 
