@@ -6,6 +6,8 @@ if (!isset($_SESSION["correo"])) {
     header("Location: https://" . $_SERVER["HTTP_HOST"] . "/login.php");
 }
 
+header("Location: https://" . $_SERVER["HTTP_HOST"] . "/censo-actual.php");
+
 ?>
 
 <!--

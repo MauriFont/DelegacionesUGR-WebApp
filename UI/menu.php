@@ -23,9 +23,11 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
         <li>
+            <!--
             <a href="/">
                 <i class="fa fa-calendar"></i> <span>Calendario</span>
             </a>
+            -->
         </li>
         <li class="treeview">
             <a href="#">
@@ -38,8 +40,7 @@
                 <li><a href="censo-historico.php"><i class="fa-regular fa-circle fa-xs"></i><span class="span-subbmenu">Histórico</span></a></li>
             </ul>
         </li>
-        <li>
-        <li class="treeview">
+        <!--
         <li class="treeview">
             <a href="#">
                 <i class="fa fa-people-group"></i> <span>Plenos</span>
@@ -57,6 +58,7 @@
                 <i class="fa fa-tachometer"></i> <span>Sorteo</span></span>
             </a>
         </li>
+        -->
     </ul>
 </section>
 <!-- /.sidebar -->
