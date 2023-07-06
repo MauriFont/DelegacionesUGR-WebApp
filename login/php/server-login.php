@@ -16,7 +16,7 @@ $client = new Google_Client(['client_id' => $CLIENT_ID]);  // Specify the CLIENT
 $payload = $client->verifyIdToken($id_token);
 
 if ($payload) {
-    $sql = "SELECT nombre, apellidos FROM Miembros WHERE correo=?";
+    $sql = "SELECT Miembros.nombre, Miembros.apellidos FROM Acceso INNER JOIN Miembros ON Acceso.miembro_id = Miembros.id WHERE Acceso.correo = ?";
     $miembro = $pdo->get($sql, array($payload['email']))->fetch();
 
     if ($miembro) {

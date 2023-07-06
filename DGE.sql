@@ -2,8 +2,8 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host:
--- Generation Time: Jul 05, 2023 at 07:42 AM
+-- Host: sql109.infinityfree.com
+-- Generation Time: Jul 06, 2023 at 05:09 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.22
 
@@ -21,6 +21,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `DGE`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Acceso`
+--
+
+CREATE TABLE `Acceso` (
+  `miembro_id` int(11) NOT NULL,
+  `correo` varchar(254) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -96,25 +107,15 @@ CREATE TABLE `Miembros` (
   `entrada` date NOT NULL,
   `salida` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Plenos`
---
-
-CREATE TABLE `Plenos` (
-  `id` int(11) NOT NULL,
-  `fecha` date NOT NULL,
-  `hora_segunda` time NOT NULL,
-  `asunto` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `descripcion` text COLLATE utf8_spanish_ci DEFAULT NULL,
-  `estado` tinyint(1) NOT NULL COMMENT '0 = inactivo'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `Acceso`
+--
+ALTER TABLE `Acceso`
+  ADD KEY `Acceso_miembroid` (`miembro_id`);
 
 --
 -- Indexes for table `Areas`
@@ -152,12 +153,6 @@ ALTER TABLE `Miembros`
   ADD KEY `miembros_fk_centro` (`centro`);
 
 --
--- Indexes for table `Plenos`
---
-ALTER TABLE `Plenos`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -183,17 +178,17 @@ ALTER TABLE `Cargos_por_area`
 -- AUTO_INCREMENT for table `Miembros`
 --
 ALTER TABLE `Miembros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `Plenos`
---
-ALTER TABLE `Plenos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `Acceso`
+--
+ALTER TABLE `Acceso`
+  ADD CONSTRAINT `Acceso_miembroid` FOREIGN KEY (`miembro_id`) REFERENCES `Miembros` (`id`);
 
 --
 -- Constraints for table `Cargos`
