@@ -14,7 +14,7 @@ header("Location: https://" . $_SERVER["HTTP_HOST"] . "/censo-actual.php");
     Author  Mauricio Fontebasso
     Support <https://github.com/MauriFont/DelegacionesUGR-WebApp>
     Email   <elfontex80@gmail.com>
-    license MIT <http://opensource.org/licenses/MIT>
+    All rights reserved
 -->
 
 <!DOCTYPE html>
